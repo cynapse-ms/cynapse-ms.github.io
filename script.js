@@ -25,7 +25,18 @@ const configurations_weekend = {
     'dormir': ['21:30', '9:30', 'purple']
 }
 
-const configurations = configurations_weekend;
+const schoolButton = document.getElementById("schoolButton");
+const weekendButton = document.getElementById("weekendButton");
+
+let configurations = configurations_weekend;
+
+schoolButton.addEventListener('click', function() {
+    configurations = configurations_school;
+});
+
+weekendButton.addEventListener('click', function() {
+    configurations = configurations_weekend;
+});
 
 const canvas = document.getElementById('clockCanvas');
 canvas.height = window.innerHeight;
